@@ -34,3 +34,14 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Code quality tools
+
+| Command                | Tool                           | What it does                                 |
+| ---------------------- | ------------------------------ | -------------------------------------------- |
+| `npm run format`       | Prettier (formatter)           | Formats all files                            |
+| `npm run format:check` | Prettier                       | Checks formatting without changing files     |
+| `npm run lint`         | ESLint (linter)                | Finds bugs and bad patterns in the code      |
+| `npm run typecheck`    | TypeScript                     | Checks types (`tsc --noEmit`)                |
+| `npm test`             | Vitest + React Testing Library | Runs the tests in `__tests__/`               |
+| `npm run test:watch`   | Vitest                         | Runs the tests again whenever a file changes |
