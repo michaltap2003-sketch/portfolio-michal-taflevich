@@ -37,11 +37,16 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## Code quality tools
 
-| Command                | Tool                           | What it does                                 |
-| ---------------------- | ------------------------------ | -------------------------------------------- |
-| `npm run format`       | Prettier (formatter)           | Formats all files                            |
-| `npm run format:check` | Prettier                       | Checks formatting without changing files     |
-| `npm run lint`         | ESLint (linter)                | Finds bugs and bad patterns in the code      |
-| `npm run typecheck`    | TypeScript                     | Checks types (`tsc --noEmit`)                |
-| `npm test`             | Vitest + React Testing Library | Runs the tests in `__tests__/`               |
-| `npm run test:watch`   | Vitest                         | Runs the tests again whenever a file changes |
+| Command                | Tool                           | What it does                                                |
+| ---------------------- | ------------------------------ | ----------------------------------------------------------- |
+| `npm run ci`           | All of the below               | Runs typecheck, lint, format check and tests, in that order |
+| `npm run fix`          | ESLint + Prettier              | Fixes lint problems it can and formats all files            |
+| `npm run format`       | Prettier (formatter)           | Formats all files                                           |
+| `npm run format:check` | Prettier                       | Checks formatting without changing files                    |
+| `npm run lint`         | ESLint (linter)                | Finds bugs and bad patterns; fails on any warning           |
+| `npm run lint:fix`     | ESLint                         | Same as lint, and fixes what it can                         |
+| `npm run typecheck`    | TypeScript                     | Checks types (`tsc --noEmit`)                               |
+| `npm test`             | Vitest + React Testing Library | Runs the tests in `__tests__/`                              |
+| `npm run test:watch`   | Vitest                         | Runs the tests again whenever a file changes                |
+
+Note: run the full check with `npm run ci`. Plain `npm ci` is a different, built-in npm command that only installs dependencies.
