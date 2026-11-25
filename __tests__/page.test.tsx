@@ -6,15 +6,12 @@ afterEach(() => {
   cleanup();
 });
 
-test("renders the portfolio heading", () => {
+test("renders the name as the main heading", () => {
   render(<Home />);
-  expect(
-    screen.getByRole("heading", { level: 1, name: "Michal Taflevich - Portfolio" }),
-  ).toBeDefined();
+  expect(screen.getByRole("heading", { level: 1, name: "Michal Taflevich" })).toBeDefined();
 });
 
-test("renders the Deploy Now and Documentation links", () => {
+test("renders the title", () => {
   render(<Home />);
-  expect(screen.getByRole("link", { name: /Deploy Now/ })).toBeDefined();
-  expect(screen.getByRole("link", { name: "Documentation" })).toBeDefined();
+  expect(screen.getByText("Computer Science Student")).toBeDefined();
 });
