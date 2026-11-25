@@ -1,0 +1,8 @@
+# Always use LF line endings, on every OS (including Windows).
+# Prettier expects LF, so this keeps "npm run format:check" passing everywhere.
+* text=auto eol=lf
+
+# Binary files: never touch them.
+*.ico binary
+*.png binary
+*.jpg binary
